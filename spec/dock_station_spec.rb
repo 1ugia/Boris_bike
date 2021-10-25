@@ -29,6 +29,9 @@ describe Dockstation do
       expect { subject.release }.to raise_error 'No bikes'
     end
 
+    it 'to raise error if bike is broken' do
+      
+    end
   end
 
   context 'capacity' do
