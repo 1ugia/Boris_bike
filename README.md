@@ -16,7 +16,7 @@ I'd like to see if a bike is working.
 
 ## Domain Model
 
-|Noun        | Owner or property |
+|Noun         | Owner or property |
 | --------   | ------------------| 
 | Bike       | Owner    | 
 | Docking Station | Owner | 

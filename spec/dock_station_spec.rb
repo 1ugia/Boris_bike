@@ -30,7 +30,7 @@ describe Dockstation do
     end
 
     it 'to raise error if bike is broken' do
-      
+      #---------------------------------------
     end
   end
 
@@ -40,7 +40,6 @@ describe Dockstation do
       50.times {subject.dock(Bike.new)}
       expect { raise subject.dock(bike2) }.to raise_error('Too many bikes docked')
     end
-
   end
   
 end
