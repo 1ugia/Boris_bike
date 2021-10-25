@@ -2,6 +2,7 @@ require_relative './bike.rb'
 
 class Dockstation
   attr_reader :station
+
   def initialize
     # @b1 = Bike.new
     @station = []
@@ -12,7 +13,9 @@ class Dockstation
     @station << bike
   end
   
-  def ride(bike)
+  def release
+    fail 'No bikes' if @station.empty?
     @station.pop
   end
+
 end
