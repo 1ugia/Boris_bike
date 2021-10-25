@@ -13,3 +13,21 @@ I'd like to see if a bike is working
 
 
 ```
+
+## Domain Model
+
+|Noun        | Owner or property |
+| --------   | ------------------| 
+| Bike       | Owner    | 
+| Docking Station | Owner | 
+
+|Action        | Owned by ? |
+| --------   | ------------------| 
+| release bike  | docking station  | 
+| bike working | bike | 
+
+|Action        | Property it reads or changes |
+| --------   | ------------------| 
+| release bike  | array of bikes, bikes | 
+| bike working | bike | 
+
