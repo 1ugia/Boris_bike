@@ -30,7 +30,9 @@ describe Dockstation do
     end
 
     it 'to raise error if bike is broken' do
-      #---------------------------------------
+      bike1.broken
+      subject.dock(bike1)
+      expect { subject.release }.to raise_error 'Broken bike'
     end
   end
 

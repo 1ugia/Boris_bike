@@ -15,6 +15,7 @@ class Dockstation
   
   def release
     fail 'No bikes' if @station.empty?
+    fail 'Broken bike' if @station.last.working? == false
     @station.pop
   end
 
