@@ -1,7 +1,7 @@
 require_relative './bike.rb'
 
 class Dockstation
-  attr_reader :station
+  attr_reader :station, :bike
 
   def initialize
     # @b1 = Bike.new
