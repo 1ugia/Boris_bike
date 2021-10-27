@@ -1,20 +1,15 @@
 require 'dock_station.rb'
 
 describe Dockstation do
-  # bike1 = Bike.new
-  # bike2 = Bike.new
   let(:bike) { double :bike }
 
   context 'dockingstation' do
-
     it 'docks a bike' do
       expect(subject.dock(bike)).to eq [bike]
     end
-    
   end
 
   context 'releasing bike' do
-
     it 'releases a bike' do
       allow(bike).to receive(:working?).and_return(true)
       subject.dock(bike)
@@ -36,10 +31,13 @@ describe Dockstation do
 
   context 'capacity' do
     it 'has a capacity of 50' do
-      50.times {subject.dock(Bike.new)}
+      50.times {subject.dock(bike)}
       expect { raise subject.dock(bike) }.to raise_error('Too many bikes docked')
     end
 
+    it 'has a default capacity' do
+      expect(subject.capacity).to eq Dockstation::DEFAULT_CAPACITY
+    end
   end
 
 end
