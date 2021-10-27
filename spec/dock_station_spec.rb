@@ -30,12 +30,12 @@ describe Dockstation do
   end
 
   context 'capacity' do
-    it 'has a capacity of 50' do
+    it 'cannot go over capacity of 50 and raise error' do
       50.times {subject.dock(bike)}
       expect { raise subject.dock(bike) }.to raise_error('Too many bikes docked')
     end
 
-    it 'has a default capacity' do
+    it 'has a DEFAULT capacity' do
       expect(subject.capacity).to eq Dockstation::DEFAULT_CAPACITY
     end
 
