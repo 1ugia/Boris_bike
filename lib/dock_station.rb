@@ -4,12 +4,11 @@ class Dockstation
   attr_reader :station, :bike
 
   def initialize
-    # @b1 = Bike.new
     @station = []
   end
 
   def dock(bike)
-    fail 'Too many bikes docked' if @station.count >= 50
+    fail 'Too many bikes docked' if full?
     @station << bike
   end
   
@@ -17,6 +16,12 @@ class Dockstation
     fail 'No bikes' if @station.empty?
     fail 'Broken bike' if @station.last.working? == false
     @station.pop
+  end
+
+  private
+
+  def full?
+    @station.count >= 50
   end
 
 end

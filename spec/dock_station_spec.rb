@@ -36,10 +36,10 @@ describe Dockstation do
 
   context 'capacity' do
     it 'has a capacity of 50' do
-      # subject.dock( 50.times { Bike.new } )
       50.times {subject.dock(Bike.new)}
       expect { raise subject.dock(bike) }.to raise_error('Too many bikes docked')
     end
+
   end
 
 end
