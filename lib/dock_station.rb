@@ -24,4 +24,8 @@ class Dockstation
     @station.count >= 50
   end
 
+  def empty?
+    @station.count == 0
+  end
+
 end
