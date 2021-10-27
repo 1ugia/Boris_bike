@@ -38,6 +38,11 @@ describe Dockstation do
     it 'has a default capacity' do
       expect(subject.capacity).to eq Dockstation::DEFAULT_CAPACITY
     end
+
+    it 'allows user to increase capacity fluidly' do
+      old = Dockstation.new(20)
+      expect(old.capacity).to eq 20
+    end
   end
 
 end
