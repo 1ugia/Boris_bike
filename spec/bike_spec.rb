@@ -10,5 +10,4 @@ describe Bike do
     expect(subject.broken).to eq false
   end #state of broken bike rather behaviour
 
-
 end
