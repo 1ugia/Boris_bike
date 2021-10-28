@@ -11,7 +11,6 @@ class Bike
 
   def broken
     @working = false
-    # 'Bike faulty'
   end
 
 end
