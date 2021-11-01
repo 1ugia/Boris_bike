@@ -45,4 +45,13 @@ describe Dockstation do
     end
   end
 
+  context 'broken bike' do
+    it 'allows to report broken bike to not release bike' do
+      subject.dock(bike)
+      allow(bike).to receive(:report_broken).and_return(false)
+      allow(bike).to receive(:working?).and_return(false)
+      expect { raise subject.release }.to raise_error('Broken bike')
+    end
+  end
+
 end

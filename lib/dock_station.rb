@@ -16,21 +16,21 @@ class Dockstation
   
   def release
     fail 'No bikes' if empty?
-    fail 'Broken bike' if broken
+    fail 'Broken bike' if check_broken
     @station.pop
   end
-
+  
   private
-
+  
   def full?
     @station.count >= @capacity
   end
-
+  
   def empty?
     @station.count == 0
   end
-
-  def broken
+  
+  def check_broken
     @station.last.working? == false
   end
 

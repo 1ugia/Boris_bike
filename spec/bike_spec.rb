@@ -7,7 +7,7 @@ describe Bike do
   end
 
   it 'tells you about broken bike' do
-    expect(subject.broken).to eq false
+    expect(subject.report_broken).to eq false
   end #state of broken bike rather behaviour
 
 end
