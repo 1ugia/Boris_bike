@@ -1,4 +1,7 @@
 # Boris Bike
+A command-line, mimic of Santandare bikes.
+
+Make sure to have Ruby installed and run `irb` in terminal to play with the program! :)
 
 ## User stories
 
